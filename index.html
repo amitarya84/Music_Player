@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/playlist.css">
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <title>Music Player</title>
+</head>
+
+<body>
+    <main>
+        <div class="music-img-container">
+            <div class="head">
+                <button id="playlistBtn" class="pressable">
+                    <span class="material-icons">queue_music</span>
+                </button>
+                <p>PLAYING NOW</p>
+                <div class="volumeBar">
+                    <div class="volumeRevealer"></div>
+                    <input max="10" value="5" id="volumeInput" type="range">
+                </div>
+                <button id="vloumeBtn" class="pressable">
+                    <span class="material-icons">
+                        volume_up
+                    </span>
+
+                </button>
+            </div>
+
+            <div class="music-img">
+                <img src="images/lotus-4a.jpg" alt="">
+            </div>
+
+            <div class="songNameContainer">
+                <h2 class="songName">Song name</h2>
+                <p>Discription of the Song</p>
+            </div>
+        </div>
+        <div class="controls-container">
+            <div>
+                <div class="progressBar-container">
+                    <span class="sliderFill"></span>
+                    <input id="progressBar" class="slider" type="range" max="100" value="0"/>
+                    <span class="curTime">00:00</span>
+                    <span class="totelTime">00:00</span>
+                </div>
+            </div>
+            <div class="cc2">
+                <button class="shuffle">
+                    <span class="shuffleSpan material-icons md-48">
+                        shuffle
+                    </span>
+                </button>
+                <button class="loop">
+                    <span class="loopSpan material-icons">
+                        repeat
+                    </span>
+                </button>
+            </div>
+            <div class="cc1">
+                <button class="prv pressable">
+                    <i class="fa fa-step-backward" aria-hidden="true"></i>
+                </button>
+
+                <button id="play-pause" class="pressable" data-playing='false'>
+                    <span class="material-icons">play_arrow</span>
+                </button>
+
+                <button class="forward pressable">
+                    <i class="fa fa-step-forward" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- <div class="up"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div> -->
+        </div>
+
+    </main>
+
+
+
+    <div class="playlistMainContainer">
+        <div class="music-img-container">
+            <div class="down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+            <div class="head">
+                <p>PLAYLIST</p>
+            </div>
+
+            <div class="musicNoption">
+                <div>
+                    <button class="heartBtn prv pressable"><i class="fa fa-step-backward"
+                            aria-hidden="true"></i></button>
+                    <div class="playlist-music-img">
+                        <img src="images/lotus-4a.jpg" alt="">
+                        <div class="bigPlayPauseBtn"><span class="material-icons">play_arrow</span></div>
+                    </div>
+                    <button class="threeDotBtn forward pressable"><i class="fa fa-step-forward"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="playlistContainer">
+            <ul id="playList">
+                <li class="songLi songLi1" data-src="music/Agent_Vinod_Raabta_Ft_Kehte_Hain_Kh.mp3">
+                    <div class="textContainer">
+                        <h4>Kuchh to hai tujhse Rabta</h4>
+                    </div>
+                    <figure class="bars"></figure>
+                    <!-- <button class="playPauseBtn pressable" data-playing='false'><span
+                        class="material-icons">play_arrow</span></button> -->
+                </li>
+                <li class="songLi songLi2" data-src="music/Anne-Marie - 2002 [Official Video].mp3">
+                    <div class="textContainer">
+                        <h4>2002 - Anne Marie</h4>
+                    </div>
+                    <figure class="bars"></figure>
+
+                    <!-- <button class="playPauseBtn pressable" data-playing='false'><span
+                            class="material-icons">play_arrow</span></button> -->
+                </li>
+                <li class="songLi songLi3" data-src="music/Desi Kalakaar - Yo Yo Honey Sing.mp3 " class="selected">
+                    <div class="textContainer">
+                        <h4>Desi Kalakar - Honey Singh</h4>
+
+                    </div>
+                    <figure class="bars"></figure>
+
+                    <!-- <button class="playPauseBtn pressable" data-playing='false'><span
+                        class="material-icons">pause</span></button> -->
+
+                </li>
+                <li class="songLi songLi4"
+                    data-src="music/BTS___Steve_Aoki_-_Waste_It_On_Me_(Emma_Heesters___Ysabelle_Cover).mp3">
+                    <div class="textContainer">
+                        <h4>Waste it on me (Emma Heesters, Ysabelle Cover)</h4>
+                    </div>
+                    <figure class="bars"></figure>
+
+                    <!-- <button class="playPauseBtn pressable" data-playing='false'><span
+                        class="material-icons">play_arrow</span></button> -->
+                </li>
+                <li class="songLi songLi5" data-src="music/Dj Chetas - Main Tenu Samjhawan (Remix).mp3">
+                    <div class="textContainer">
+                        <h4>Dj chetas (arijit singh songs Mashup)</h4>
+                    </div>
+                    <figure class="bars"></figure>
+                    <!-- <button class="playPauseBtn pressable" data-playing='false'><span
+                        class="material-icons">play_arrow</span></button> -->
+                </li>
+                <li class="songLi songLi6" data-src="music/Backbone (128 Kbps) - DownloadMing.SE.mp3">
+                    <div class="textContainer">
+                        <h4>Backbone - Hardy Sandhu</h4>
+                        
+                    </div>
+                    <figure class="bars"></figure>
+
+                    <!-- <button class="playPauseBtn pressable" data-playing='false'><span
+                            class="material-icons">play_arrow</span></button> -->
+                </li>
+            </ul>
+        </div>
+    </div class="playlistMainContainer">
+</body>
+<script src="scripts/script.js"></script>
+
+</html>
